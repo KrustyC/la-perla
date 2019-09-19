@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ItalySvg from '../assets/icons/italy.svg';
-import UkSvg from '../assets/icons/united-kingdom.svg';
+import ItalySvg from '../assets/icons/flags/italy.svg';
+import UkSvg from '../assets/icons/flags/united-kingdom.svg';
 import Link from './Link';
 
 import links from '../utils/links';
@@ -12,7 +12,7 @@ const Nav = styled.nav`
   right: 0;
   left: 0;
   width: 100vw;
-  height: 100px;
+  height: 130px;
   background: transparent;
   display: flex;
   justify-content: flex-end;

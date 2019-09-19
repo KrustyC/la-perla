@@ -9,8 +9,13 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
     outline: 0;
     box-sizing:border-box;
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    background: black;
+
+    > {
+      background: black;
+    }
   }
 `;
 

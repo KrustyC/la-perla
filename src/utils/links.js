@@ -1,3 +1,8 @@
+import TwitterSvg from '../assets/icons/socials/twitter.svg';
+import InstagramSvg from '../assets/icons/socials/instagram.svg';
+import FacebookSvg from '../assets/icons/socials/facebook.svg';
+import PinterestSvg from '../assets/icons/socials/pinterest.svg';
+
 const navbarLinks = [
   {
     label: 'Philosophy',
@@ -32,7 +37,27 @@ const footerLinks = [
   },
 ];
 
+const socialLinks = [
+  {
+    url: 'https://facebook.com',
+    icon: FacebookSvg,
+  },
+  {
+    url: 'https://instagram.com',
+    icon: InstagramSvg,
+  },
+  {
+    url: 'https://instagram.com',
+    icon: PinterestSvg,
+  },
+  {
+    url: 'https://instagram.com',
+    icon: TwitterSvg,
+  },
+];
+
 export default {
-  navbarLinks,
   footerLinks,
+  navbarLinks,
+  socialLinks,
 };

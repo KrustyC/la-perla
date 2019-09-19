@@ -1,15 +1,32 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import BackgroundImage from 'gatsby-background-image';
 
 const StyledBackgroundImage = styled(BackgroundImage)`
+  ${props => console.log(props)}
   width: 100%;
-  height: 500px;
+  height: 85vh;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-size: cover;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
+
+  ${({ fluid }) =>
+    fluid &&
+    css`
+      &::before {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1),
+            rgba(117, 19, 93, 0),
+            rgba(117, 19, 93, 0),
+            rgba(117, 19, 93, 0)
+          ),
+          url(${fluid.srcWebp}) !important;
+      }
+    `}
 
   h1 {
     font-size: 100px;

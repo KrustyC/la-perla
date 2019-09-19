@@ -1,16 +1,15 @@
 import React from 'react';
-import BackgroundHome from '../components/BackgroundImages/BackgroundHome';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Main from '../uikit/Main';
-import P from '../uikit/P';
+import Main from '../../uikit/Main';
+import P from '../../uikit/P';
+import BackgroundContacts from '../../components/BackgroundImages/BackgroundContacts';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
-const Home = () => (
+const Contacts = () => (
   <div>
-    <BackgroundHome>
+    <BackgroundContacts>
       <Navbar />
-      <h1>La Perla di Isola Bella</h1>
-    </BackgroundHome>
+    </BackgroundContacts>
     <Main>
       <div>
         <P>
@@ -43,4 +42,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default Contacts;

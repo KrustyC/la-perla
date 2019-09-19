@@ -22,11 +22,11 @@ const theme = {
 };
 
 // eslint-disable-next-line react/prop-types
-export default ({ element, props }) => (
+export default ({ element }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <OverlayLayout {...props}>{element}</OverlayLayout>
+      {element}
     </>
   </ThemeProvider>
 );

@@ -1,16 +1,15 @@
 import React from 'react';
-import BackgroundHome from '../components/BackgroundImages/BackgroundHome';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Main from '../uikit/Main';
-import P from '../uikit/P';
+import BackgroundApartments from '../../components/BackgroundImages/BackgroundApartments';
+import Main from '../../uikit/Main';
+import P from '../../uikit/P';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
-const Home = () => (
+const Apartments = () => (
   <div>
-    <BackgroundHome>
+    <BackgroundApartments>
       <Navbar />
-      <h1>La Perla di Isola Bella</h1>
-    </BackgroundHome>
+    </BackgroundApartments>
     <Main>
       <div>
         <P>
@@ -43,4 +42,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default Apartments;

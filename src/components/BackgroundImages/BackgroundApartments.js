@@ -23,7 +23,7 @@ const BackgroundApartment = ({ children }) => (
         <StyledBackgroundImage
           Tag="section"
           fluid={imageData}
-          backgroundColor="#040e18"
+          // backgroundColor="#040e18"
         >
           {children}
         </StyledBackgroundImage>
