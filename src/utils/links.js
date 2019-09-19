@@ -1,6 +1,6 @@
 const navbarLinks = [
   {
-    label: 'Home',
+    label: 'Philosophy',
     to: '/',
   },
   {
