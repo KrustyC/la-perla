@@ -33,12 +33,12 @@ module.exports = {
       },
     },
     // {
-    //   resolve: `gatsby-plugin-google-analytics`,
+    //   resolve: `gatsby-plugin-i18next`,
     //   options: {
-    //     trackingId: `${process.env.GOOGLE_ANALYTICS_TRACKING_ID}`,
-    //     sampleRate: 5,
-    //     siteSpeedSampleRate: 10,
-    //     cookieDomain: 'beatricecox.com',
+    //     availableLngs: ['en', 'it'],
+    //     fallbackLng: 'en',
+    //     debug: process.env.NODE_ENV === 'development',
+    //     siteUrl: 'https://laperlataormina.com/',
     //   },
     // },
     {

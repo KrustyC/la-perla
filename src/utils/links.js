@@ -43,15 +43,15 @@ const socialLinks = [
     icon: FacebookSvg,
   },
   {
-    url: 'https://instagram.com',
+    url: 'https://instagram.com/hello',
     icon: InstagramSvg,
   },
   {
-    url: 'https://instagram.com',
+    url: 'https://instagram.com/hello/moto',
     icon: PinterestSvg,
   },
   {
-    url: 'https://instagram.com',
+    url: 'https://instagram.com/hello/mot',
     icon: TwitterSvg,
   },
 ];

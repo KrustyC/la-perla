@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translation } from 'react-i18next';
 import ItalySvg from '../assets/icons/flags/italy.svg';
 import UkSvg from '../assets/icons/flags/united-kingdom.svg';
 import Link from './Link';
@@ -39,14 +40,22 @@ const Icon = styled.div`
 const Navbar = () => (
   <Nav>
     {links.navbarLinks.map(({ label, to }) => (
-      <Link to={to}>{label}</Link>
+      <Link key={to} to={to}>
+        {label}
+      </Link>
     ))}
-    <Icon>
-      <ItalySvg />
-    </Icon>
-    <Icon>
-      <UkSvg />
-    </Icon>
+    <Translation>
+      {(_, { i18n }) => (
+        <>
+          <Icon>
+            <ItalySvg onClick={() => i18n.changeLanguage('it')} />
+          </Icon>
+          <Icon>
+            <UkSvg onClick={() => i18n.changeLanguage('en')} />
+          </Icon>
+        </>
+      )}
+    </Translation>
   </Nav>
 );
 

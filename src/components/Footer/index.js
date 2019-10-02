@@ -72,7 +72,7 @@ const Footer = () => (
     <Block>
       <List>
         {links.navbarLinks.map(({ label, to }) => (
-          <Li>
+          <Li key={to}>
             <Link to={to}>{label}</Link>
           </Li>
         ))}
@@ -81,7 +81,7 @@ const Footer = () => (
     <Block>
       <List>
         {links.footerLinks.map(({ label, to }) => (
-          <Li>
+          <Li key={to}>
             <Link to={to}>{label}</Link>
           </Li>
         ))}
@@ -96,7 +96,7 @@ const Footer = () => (
         <br />
         <Socials>
           {links.socialLinks.map(({ url, icon: Icon }) => (
-            <IconContainer href={url}>
+            <IconContainer key={url} href={url}>
               <Icon />
             </IconContainer>
           ))}
