@@ -60,6 +60,7 @@ const Form = () => (
     {({
       values,
       errors,
+      isValid,
       setFieldTouched,
       setFieldValue,
       handleSubmit,
@@ -132,7 +133,7 @@ const Form = () => (
 
         <br />
 
-        <Button type="submit" disabled={isSubmitting}>
+        <Button type="submit" disabled={isSubmitting || isValid}>
           Send
         </Button>
       </form>

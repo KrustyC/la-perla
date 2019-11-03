@@ -6,11 +6,11 @@ import P from '../../uikit/P';
 import BackgroundContacts from '../../components/BackgroundImages/BackgroundContacts';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import mapImg from '../../images/maps.png';
+import mapImg from '../../images/maps.jpg';
 import Form from './Form';
 
 const Img = styled.img`
-  height: 500px;
+  height: 450px;
   width: 100%;
 `;
 
@@ -28,6 +28,8 @@ const Contacts = () => {
         <div>
           <Img src={mapImg} alt="map" />
           <Form />
+          <br />
+          <br />
           <P>{t('firstPar')}</P>
           <P>{t('secondPar')}</P>
           <P>{t('thirdPar')}</P>

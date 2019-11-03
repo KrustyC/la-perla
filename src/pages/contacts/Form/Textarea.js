@@ -19,7 +19,7 @@ const Label = styled.label`
   padding: 0;
   margin: 0;
   border: 0;
-  bottom: 10px;
+  top: 15px;
   color: #000;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
@@ -34,6 +34,7 @@ const Label = styled.label`
 const Input = styled.textarea`
   padding: 0;
   margin: 0;
+  padding-top: 18px;
   border: none;
   outline: none;
   height: auto;
@@ -46,7 +47,7 @@ const Input = styled.textarea`
   }
 `;
 
-const TextInput = ({ id, label, value, type, ...otherProps }) => {
+const Textarea = ({ id, label, value, type, ...otherProps }) => {
   const [active, setActive] = useState(value && value.length > 0);
 
   const onFocus = () => setActive(true);
@@ -72,11 +73,11 @@ const TextInput = ({ id, label, value, type, ...otherProps }) => {
   );
 };
 
-TextInput.propTypes = {
+Textarea.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
 };
 
-export default TextInput;
+export default Textarea;
