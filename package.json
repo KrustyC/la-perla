@@ -27,6 +27,7 @@
     "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-i18next": "^10.13.1",

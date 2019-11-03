@@ -2,8 +2,14 @@ import React from 'react';
 import BackgroundApartments from '../../components/BackgroundImages/BackgroundApartments';
 import Main from '../../uikit/Main';
 import P from '../../uikit/P';
+import Carousel from '../../components/Carousel';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import apartmentImg from '../../images/apartment.jpg';
+import contactsImg from '../../images/contacts.jpg';
+import homeImg from '../../images/home.jpg';
+
+const images = [apartmentImg, contactsImg, homeImg];
 
 const Apartments = () => (
   <div>
@@ -38,6 +44,7 @@ const Apartments = () => (
         </P>
       </div>
     </Main>
+    <Carousel items={images} />
     <Footer />
   </div>
 );
