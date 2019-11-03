@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import LeftArrowSvg from '../../assets/icons/left-arrow.svg';
 import RightArrowSvg from '../../assets/icons/right-arrow.svg';
-// import rightArrowSvg from '../../images/right-arrow.svg';
-// import ItalySvg from '../assets/icons/flags/italy.svg';
 
 import {
   HistoryContainer,
