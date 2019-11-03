@@ -5,7 +5,7 @@ const Main = styled.div`
   background: #131313;
   color: #949494;
 
-  div {
+  > div {
     padding: 100px 0;
     margin: 0 auto;
     max-width: 768px;
