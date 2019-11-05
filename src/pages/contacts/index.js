@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import Main from '../../uikit/Main';
 import P from '../../uikit/P';
+import Title from '../../uikit/Title';
 import BackgroundContacts from '../../components/BackgroundImages/BackgroundContacts';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -21,7 +22,7 @@ const Contacts = () => {
     <div>
       <BackgroundContacts>
         <Navbar />
-        <h1>{t('heading')}</h1>
+        <Title>{t('heading')}</Title>
       </BackgroundContacts>
 
       <Main>

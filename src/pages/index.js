@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
 import BackgroundHome from '../components/BackgroundImages/BackgroundHome';
@@ -7,11 +6,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Main from '../uikit/Main';
 import P from '../uikit/P';
-
-const Title = styled.h1`
-  font-family: 'NiagaraSolid' !important;
-  letter-spacing: 0px !important;
-`;
+import Title from '../uikit/Title';
 
 const Home = () => {
   const { t } = useTranslation('home');
