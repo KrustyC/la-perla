@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
 const StyledBackgroundImage = styled(BackgroundImage)`
-  ${props => console.log(props)}
   width: 100%;
   height: 85vh;
   background-position: center;

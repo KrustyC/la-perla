@@ -35,6 +35,8 @@ const Icon = styled.div`
   &:not(:last-of-type) {
     margin-right: 0px;
   }
+
+  opacity: ${({ active }) => (active ? 1 : 0.5)};
 `;
 
 const Navbar = () => (
@@ -47,10 +49,10 @@ const Navbar = () => (
     <Translation>
       {(_, { i18n }) => (
         <>
-          <Icon>
+          <Icon active={i18n.language === 'it'}>
             <ItalySvg onClick={() => i18n.changeLanguage('it')} />
           </Icon>
-          <Icon>
+          <Icon active={i18n.language === 'en'}>
             <UkSvg onClick={() => i18n.changeLanguage('en')} />
           </Icon>
         </>
