@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-
+import media from 'styled-media-query';
 import BackgroundImage from 'gatsby-background-image';
 
 const StyledBackgroundImage = styled(BackgroundImage)`
@@ -32,6 +32,12 @@ const StyledBackgroundImage = styled(BackgroundImage)`
     color: #fff;
     margin-left: 60px;
     margin-bottom: -20px;
+
+    ${media.lessThan('large')`
+      font-size: 50px;
+      margin-left: 10px;
+      margin-bottom: -10px;
+    `}
   }
 `;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import media from 'styled-media-query';
 import styled from 'styled-components';
 import Link from '../Link';
 import links from '../../utils/links';
@@ -11,6 +12,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${media.lessThan('large')`
+    height: 100%;
+    padding: 50px 30px;
+    align-items: flex-start;
+  `}
+
+  ${media.lessThan('small')`
+    flex-direction: column;
+  `}
 `;
 
 const Block = styled.div`
@@ -21,9 +32,23 @@ const Block = styled.div`
   width: 30%;
   height: 100%;
 
-  &:not(:last-of-type) {
-    border-right: 3px solid #fff;
-  }
+  ${media.greaterThan('large')`
+    &:not(:last-of-type) {
+      border-right: 3px solid #fff;
+    }
+  `}
+
+  ${media.lessThan('small')`
+    width: 100%;
+    &:not(:first-of-type) {
+      border-top: 3px solid #fff;
+      padding-top: 20px;
+    }
+  `}
+
+  /* ${media.lessThan('large')`
+    width: 100%;
+  `} */
 `;
 
 const List = styled.ul`
@@ -61,6 +86,11 @@ const IconContainer = styled.a`
     fill: white;
     width: 50px;
     height: 50px;
+
+    ${media.lessThan('large')`
+      width: 25px;
+      height: 25px;
+    `}
   }
   &:not(:last-of-type) {
     margin-right: 1rem;

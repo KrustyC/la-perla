@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik } from 'formik';
+import media from 'styled-media-query';
 import styled from 'styled-components';
 import Input from './Input';
 import Textarea from './Textarea';
@@ -7,12 +8,26 @@ import Textarea from './Textarea';
 const Row = styled.div`
   display: flex;
   align-items: center;
-  > div {
-    flex: 1;
-    &:not(:last-of-type) {
-      margin-right: 30px;
+  ${media.greaterThan('large')`
+    > div {
+      flex: 1;
+      &:not(:last-of-type) {
+        margin-right: 30px;
+      }
     }
-  }
+  `}
+
+  ${media.lessThan('large')`
+    flex-direction: column;
+    align-items: flex-start;
+
+    > div {
+      width: 100%;
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+    }
+  `}
 `;
 
 const Button = styled.button`

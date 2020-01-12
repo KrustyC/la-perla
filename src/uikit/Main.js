@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 const Main = styled.div`
   min-height: 50vh;
@@ -10,6 +11,10 @@ const Main = styled.div`
     margin: 0 auto;
     max-width: 768px;
     text-align: left;
+
+    ${media.lessThan('large')`
+      padding: 40px 0;
+    `}
   }
 `;
 
