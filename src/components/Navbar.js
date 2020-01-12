@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Translation } from 'react-i18next';
 import ItalySvg from '../assets/icons/flags/italy.svg';
 import UkSvg from '../assets/icons/flags/united-kingdom.svg';
-import Link from './Link';
-
 import links from '../utils/links';
+import Link from './Link';
+import Burger from './Burger';
 
 const Nav = styled.nav`
   position: absolute;
@@ -25,6 +25,10 @@ const Nav = styled.nav`
   }
 `;
 
+const List = styled.div`
+  display: none;
+`
+
 const Icon = styled.div`
   margin: 0;
   cursor: pointer;
@@ -41,11 +45,14 @@ const Icon = styled.div`
 
 const Navbar = () => (
   <Nav>
-    {links.navbarLinks.map(({ label, to }) => (
-      <Link key={to} to={to}>
-        {label}
-      </Link>
-    ))}
+    <List>
+      {links.navbarLinks.map(({ label, to }) => (
+        <Link key={to} to={to}>
+          {label}
+        </Link>
+      ))}
+    </List>
+    <Burger />
     <Translation>
       {(_, { i18n }) => (
         <>

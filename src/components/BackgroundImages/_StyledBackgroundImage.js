@@ -12,6 +12,10 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   align-items: flex-end;
   justify-content: flex-start;
 
+  ${media.lessThan('large')`
+    height: 100vh;
+  `}
+
   ${({ fluid }) =>
     fluid &&
     css`

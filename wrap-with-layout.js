@@ -1,6 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import OverlayLayout from './src/components/Layout';
+// import OverlayLayout from './src/components/Layout';
+import Burger from './src/components/Burger';
+
 import GlobalStyle from './src/components/GlobalStyle';
 
 const theme = {
@@ -26,6 +28,7 @@ export default ({ element }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
+      <Burger />
       {element}
     </>
   </ThemeProvider>
