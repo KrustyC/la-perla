@@ -3,25 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import { Link } from 'gatsby';
-
-const links = [
-  {
-    label: 'About',
-    to: '/',
-  },
-  {
-    label: 'Projects',
-    to: '/projects',
-  },
-  {
-    label: 'Extras',
-    to: '/extras',
-  },
-  {
-    label: 'Contacts',
-    to: '/contacts',
-  },
-];
+import links from '../utils/links';
 
 const Div = styled.div`
   ${media.greaterThan('medium')`
@@ -33,21 +15,23 @@ const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   background: black;
   height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   z-index: 100000;
 `;
 
 const Button = styled.button`
   border: none;
-  background: transparent;
+  background: white;
 `;
 
 const Bar = styled.div`
+  background: #333;
   width: 30px;
   height: 4px;
-  background-color: ${({ overlay }) => (overlay ? '#FFF' : '#333')};
   margin: 6px 0;
   transition: 0.4s;
 `;
@@ -93,7 +77,7 @@ const Burger = ({ overlay }) => {
       {isOpen && (
         <Overlay>
           <Ul>
-            {links.map(({ label, to }) => (
+            {links.navbarLinks.map(({ label, to }) => (
               <Li key={to}>
                 <Link activeClassName="active" to={to}>
                   {label}
