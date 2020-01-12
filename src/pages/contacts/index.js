@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { useTranslation } from 'react-i18next';
 import Main from '../../uikit/Main';
 import P from '../../uikit/P';
@@ -13,6 +14,16 @@ import Form from './Form';
 const Img = styled.img`
   height: 450px;
   width: 100%;
+
+  ${media.lessThan('large')`
+    height: 250px;
+  `}
+`;
+
+const Div = styled.div`
+  ${media.lessThan('large')`
+    padding: 20px !important;
+  `}
 `;
 
 const Contacts = () => {
@@ -27,8 +38,10 @@ const Contacts = () => {
 
       <Main>
         <div>
-          <Img src={mapImg} alt="map" />
-          <Form />
+          <Div>
+            <Img src={mapImg} alt="map" />
+            <Form />
+          </Div>
           <br />
           <br />
           <P>{t('firstPar')}</P>
