@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { Translation } from 'react-i18next';
 import ItalySvg from '../assets/icons/flags/italy.svg';
 import UkSvg from '../assets/icons/flags/united-kingdom.svg';
@@ -25,13 +26,26 @@ const Nav = styled.nav`
   }
 `;
 
-const List = styled.div`
-  display: none;
-`
+const List = styled.span`
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  align-items: center;
+  ${media.lessThan('large')`
+    display: none;
+  `}
+
+  a {
+    &:not(:last-of-type) {
+      margin-right: 40px;
+    }
+  }
+`;
 
 const Icon = styled.div`
   margin: 0;
   cursor: pointer;
+
   svg {
     width: 50px;
     height: 30px;
