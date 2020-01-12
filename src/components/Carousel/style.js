@@ -10,6 +10,10 @@ export const CarouselContainer = styled.div`
     height: 400px;
   `}
 
+  ${media.lessThan('small')`
+    height: 250px;
+  `}
+
   img {
     width: 100%;
   }
@@ -63,6 +67,10 @@ export const HistoryContainer = styled.div`
   width: 100%;
   height: 80px;
   padding: 0;
+
+  ${media.lessThan('large')`
+    height: 30px;
+  `}
 `;
 
 export const List = styled.ul`

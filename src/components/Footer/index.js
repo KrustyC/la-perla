@@ -40,6 +40,7 @@ const Block = styled.div`
 
   ${media.lessThan('small')`
     width: 100%;
+    align-items: flex-start;
     &:not(:first-of-type) {
       border-top: 3px solid #fff;
       padding-top: 20px;
