@@ -6,6 +6,7 @@ import P from '../../uikit/P';
 import Carousel from '../../components/Carousel';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import ExtraInfo from './ExtraInfo';
 import apartmentImg from '../../images/apartment.jpg';
 import Title from '../../uikit/Title';
 import contactsImg from '../../images/contacts.jpg';
@@ -36,6 +37,7 @@ const Apartments = () => {
         </div>
       </Main>
       <Carousel items={images} />
+      <ExtraInfo />
       <Footer />
     </div>
   );

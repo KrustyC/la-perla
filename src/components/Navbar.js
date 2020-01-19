@@ -13,13 +13,18 @@ const Nav = styled.nav`
   top: 0;
   right: 0;
   left: 0;
-  width: 100vw;
+  /* width: 100vw; */
   height: 130px;
   background: transparent;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 50px;
+
+  ${media.lessThan('large')`
+    padding: 0 30px;
+    justify-content: flex-end;
+  `}
 
   > *:not(:last-child) {
     margin-right: 100px;
@@ -47,14 +52,19 @@ const Icon = styled.div`
   cursor: pointer;
 
   svg {
-    width: 50px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
-  &:not(:last-of-type) {
-    margin-right: 0px;
+
+  &:first-of-type {
+    margin-right: 10px;
   }
 
   opacity: ${({ active }) => (active ? 1 : 0.5)};
+`;
+
+const Flags = styled.div`
+  display: flex;
 `;
 
 const Navbar = () => (
@@ -67,18 +77,20 @@ const Navbar = () => (
       ))}
     </List>
     <Burger />
-    <Translation>
-      {(_, { i18n }) => (
-        <>
-          <Icon active={i18n.language === 'it'}>
-            <ItalySvg onClick={() => i18n.changeLanguage('it')} />
-          </Icon>
-          <Icon active={i18n.language === 'en'}>
-            <UkSvg onClick={() => i18n.changeLanguage('en')} />
-          </Icon>
-        </>
-      )}
-    </Translation>
+    <Flags>
+      <Translation>
+        {(_, { i18n }) => (
+          <>
+            <Icon active={i18n.language === 'it'}>
+              <ItalySvg onClick={() => i18n.changeLanguage('it')} />
+            </Icon>
+            <Icon active={i18n.language === 'en'}>
+              <UkSvg onClick={() => i18n.changeLanguage('en')} />
+            </Icon>
+          </>
+        )}
+      </Translation>
+    </Flags>
   </Nav>
 );
 
