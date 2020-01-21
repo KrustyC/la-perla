@@ -33,7 +33,7 @@ const footerLinks = [
   },
   {
     label: 'Booking Enquiry',
-    to: '/enquiry',
+    to: '/contacts',
   },
 ];
 
