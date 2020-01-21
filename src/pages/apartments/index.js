@@ -7,12 +7,8 @@ import Carousel from '../../components/Carousel';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import ExtraInfo from './ExtraInfo';
-import apartmentImg from '../../images/apartment.jpg';
 import Title from '../../uikit/Title';
-import contactsImg from '../../images/contacts.jpg';
-import homeImg from '../../images/home.jpg';
 import images from '../../images/carousel';
-// const images = [apartmentImg, contactsImg, homeImg];
 
 const Apartments = () => {
   const { t } = useTranslation('apartments');
