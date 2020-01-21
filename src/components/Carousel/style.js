@@ -4,7 +4,7 @@ import media from 'styled-media-query';
 export const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 800px;
   overflow: hidden;
   ${media.lessThan('medium')`
     height: 400px;
